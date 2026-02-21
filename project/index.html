@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ems-voters.cec.gov.ge</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Top Section: Logo and Titles -->
+      <section class="top">
+        <div class="brand">
+          <img src="./assets/cec_logo.webp" alt="ცესკო" class="brand__logo" />
+          <div class="brand__text">
+          </div>
+        </div>
+        <p class="headline">
+გადაამოწმეთ პირადი მონაცემები და მისამართი
+          <br />
+ამომრჩეველთა ერთიან სიაში
+        </p>
+        <p class="subtitle">
+ვებგვერდი განკუთვნილია მხოლოდ ამომრჩეველთათვის - საკუთარი და
+          <br />
+ოჯახის წევრების მონაცემების გადასამოწმებლად!
+        </p>
+        <br />
+        <p class="date" id="as-of-date">(01.02.2026 მდგომარეობით)</p>
+      </section>
+
+      <!-- Input Section -->
+      <section class="input-section">
+        <form class="form" aria-label="Search form">
+          <input
+            type="text"
+            class="input"
+            id="personalNumber"
+            placeholder="პირადი ნომერი"
+            aria-label="Personal number"
+          />
+          <input
+            type="text"
+            class="input"
+            id="captchaInput"
+            placeholder="გვარი"
+            aria-label="Last name"
+          />
+
+          <!-- <div class="captcha" aria-label="Human verification">
+            <label class="captcha__left">
+              <input type="checkbox" class="captcha__checkbox" aria-label="Verify" />
+              <span class="captcha__text">Verify you are human</span>
+            </label>
+            <div class="captcha__right">
+              <img
+                src="./assets/cloudflare-logo.svg"
+                alt="Cloudflare"
+                class="captcha__logo"
+              />
+              <span class="captcha__meta">Privacy · Help</span>
+            </div>
+          </div> -->
+
+          <button type="button" class="button search-button" id="searchBtn">
+            ძებნა
+          </button>
+        </form>
+      </section>
+
+      <!-- Results Section -->
+      <div id="resultsSection">
+        <section class="results" id="results">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>სურათი</th>
+                <th>გვარი</th>
+                <th>სახელი</th>
+                <th>დაბ.თარიღი</th>
+                <th>ოლქი/უბანი</th>
+                <th>მისამართი</th>
+                <th>ფაქტობრივი საცხოვრებელი ადგილი</th>
+                <th>ფაქტობრივი მდებარეობა</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="სურათი">
+                  <img
+                    src="./assets/profile.svg"
+                    alt="Profile"
+                    class="photo"
+                    id="resultPhoto"
+                  />
+                </td>
+                <td data-label="გვარი" id="resultSurname">კაკალაშვილი</td>
+                <td data-label="სახელი" id="resultName">ალექსანდრე</td>
+                <td data-label="დაბადების თარიღი" id="resultBirth">04.04.2006</td>
+                <td data-label="ოლქი/უბანი">
+                  <span class="cell-label" id="resultDistrictLabel">ელექტრონული</span>
+                  <span class="status" id="resultDistrictTime">09.53</span>
+                </td>
+                <td data-label="მისამართი" class="cell-left" id="resultAddress">
+                  სოფელი ტირინძორი N 29 ა. 4
+                </td>
+                <td
+                  data-label="ფაქტობრივი საცხოვრებელი ადგილი"
+                  class="cell-left"
+                  id="resultActualAddress"
+                >
+                  თბილისი 6 ედ. III, კორპ. (ქართველს სანისი)
+                </td>
+                <td
+                  data-label="ფაქტობრივი მდებარეობა"
+                  class="cell-left"
+                  id="resultActualLocation"
+                >
+                  სამგორი, III მ/რ
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <script src="./assets/data.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
