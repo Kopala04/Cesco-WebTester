@@ -10,5 +10,17 @@ window.RECORDS = [
     actualAddress: "თბილისი 6 ედ. III, კორპ. (ქართველს სანისი)",
     actualLocation: "სამგორი, III მ/რ",
     photo: "Tsalugelashvili.png"
+  },
+    {
+    id: "63850005721",
+    surname: "ბოძიაშვილი",
+    firstName: "გიორგი",
+    birthDate: "05.04.2006",
+    districtLabel: "ელექტრონული",
+    districtTime: "09.53",
+    address: "გურამიშვილის 81 დ",
+    actualAddress: "თბილისი 6 ედ. III, კორპ. (ქართველს სანისი)",
+    actualLocation: "გურამიშვილის III მ/რ",
+    photo: "Bodziashvili.png"
   }
 ];
